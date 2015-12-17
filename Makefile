@@ -45,8 +45,8 @@ endif
 all: shairport
 
 install: shairport
-	install -m 755 -d $(PREFIX)/bin
-	install -m 755 shairport $(PREFIX)/bin/shairport
+	install -m 755 -d $(PREFIX)${DESTDIR}/bin
+	install -m 755 shairport $(PREFIX)${DESTDIR}/bin/shairport
 
 GITREV=$(shell git describe --always)
 DIRTY:=$(shell if ! git diff --quiet --exit-code; then echo -dirty; fi)
